@@ -1,14 +1,20 @@
 import { LightningElement,api } from 'lwc';
 
 export default class StudentTile extends LightningElement {
-    @api student = {
-        Name: 'Anurag Srivastava',
-        PhotoUrl: '/services/images/photo/003B0FakePictId',
-        } ;
+    @api student;
 
-    @api isSelected = false;
+    @api selectedStudentId = '';
 
     get tileSelected() {
-        return this.isSelected ? "tile selected" : "tile";
-        }
+        return (this.selectedStudentId===this.student.Id) ? "tile selected" : "tile";
+    }
+
+    studentClick(){
+        console.log('this.student.Id:::'+this.student.Id);
+        const evt = new CustomEvent('studentselected', {
+        bubbles: true, composed: true,
+        detail: { studentId: this.student.Id }
+        });
+        this.dispatchEvent(evt) ;
+    }
 }
