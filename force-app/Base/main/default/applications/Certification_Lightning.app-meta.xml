@@ -24,6 +24,7 @@
     <navType>Standard</navType>
     <tabs>standard-home</tabs>
     <tabs>AwInstructors</tabs>
+    <tabs>AW_Instructr_Tab</tabs>
     <tabs>DeliveryListMap</tabs>
     <tabs>standard-Account</tabs>
     <tabs>standard-Contact</tabs>
@@ -34,5 +35,6 @@
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
     <tabs>TripReport__c</tabs>
+    <tabs>Course_Attendee__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

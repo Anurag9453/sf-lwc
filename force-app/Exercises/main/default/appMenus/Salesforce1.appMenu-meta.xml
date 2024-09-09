@@ -56,4 +56,8 @@
         <name>MobileHome</name>
         <type>StandardAppMenuItem</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>AW_Instructr_Tab</name>
+        <type>CustomTab</type>
+    </appMenuItems>
 </AppMenu>
