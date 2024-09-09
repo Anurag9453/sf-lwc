@@ -7,7 +7,7 @@ const fields = [FIELD_Course_Delivery__City, FIELD_Course_Delivery__Country];
 export default class DeliveryDetailMap extends LightningElement {
 	@api recordId;
 	name;
-	mapMarkers = [];
+	mapMarkers = [];  
 	error;
 	
 	@wire(getRecord, { recordId: '$recordId', fields })

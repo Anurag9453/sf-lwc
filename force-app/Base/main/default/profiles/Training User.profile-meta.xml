@@ -43,6 +43,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>CourseDeliveryLocations</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CourseTriggerHandler</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -52,6 +56,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>LoadCertificationData</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>StudentBrowser</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -311,6 +319,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Course__c</tab>
+        <visibility>Hidden</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>DeliveryListMap</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
