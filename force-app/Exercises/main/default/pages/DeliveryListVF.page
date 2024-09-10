@@ -1,0 +1,40 @@
+<apex:page controller="CourseDeliveryLocations" tabStyle="Course_Delivery__c">
+
+    <div style="text-align:center;margin-top:20px;margin-bottom:20px;">
+        <h1 style="font-size:24px;">Lightning Web Components in Visualforce</h1>
+    </div>
+
+    <!-- TODO #1: load the Lightning Components for Visualforce JavaScript library. -->
+
+    <apex:includeLightning/>
+    <apex:pageBlock>
+        <apex:pageBlockSection>
+            <apex:pageBlockSectionItem>
+                <!-- TODO #2: add a div that will hold the map once it has been created. -->
+                <div id="mapDiv"></div>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockTable value="{!locationsVF}" var="location">
+                <apex:column value="{!location['Location__c']}" />
+                <apex:column value="{!location['numDeliveries']}" />
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+
+    <div id="badgeDiv"></div>
+    <!-- TODO #3: add a div that will hold the 'locations found' badge once it has been created. -->
+
+
+    <script>
+        // Use JavaScript to invoke Lightning Web Components
+        $Lightning.use("c:dependencyApp", function ()){
+            $lightning.createComponent("c:deliveryListMap", {
+                listView: 'hidden',
+                markersTitle: "Deliveries in VF Page"
+            }, 'mapDiv');
+            $lightning.createComponent("lightning:badge", {
+                label: '{!locationsVF.size} deliveries found'
+            }, 'badgeDiv');
+        }
+    </script>
+
+</apex:page>
