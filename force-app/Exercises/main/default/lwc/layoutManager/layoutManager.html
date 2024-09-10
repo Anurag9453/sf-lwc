@@ -14,5 +14,14 @@
 				<c-student-detail></c-student-detail>
 			</lightning-layout-item>
 		</template>
+
+		<template lwc:elseif={certifiedStudentsView}>
+			<lightning-layout-item padding="around-small" size="10" >
+			<c-certified-student-list
+			certification-name={certificationName}
+			certification-id={certificationId} >
+			</c-certified-student-list>
+			</lightning-layout-item>
+		</template>
 	</lightning-layout>
 </template>

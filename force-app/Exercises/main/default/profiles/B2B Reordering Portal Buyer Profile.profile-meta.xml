@@ -15,6 +15,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>AwNavigation</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CertificationElementsData</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -24,6 +28,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>CertificationsHeldData</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CertifiedStudentList</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -296,6 +304,10 @@
     <layoutAssignments>
         <layout>TripReport__c-Trip Report Layout</layout>
     </layoutAssignments>
+    <pageAccesses>
+        <apexPage>DeliveryListVF</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Account.Customer</recordType>

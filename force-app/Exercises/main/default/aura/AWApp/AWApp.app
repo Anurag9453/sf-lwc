@@ -24,4 +24,4 @@
 		
 	</lightning:layout>
 	
-</aura:application>	
+</aura:application>
