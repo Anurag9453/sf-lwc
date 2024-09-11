@@ -1,0 +1,9 @@
+
+@media(max-width: 767px){
+    .hiddenOnMobile{
+        display:none;
+    }
+}
+.selectedRow{
+    color:brown;
+}

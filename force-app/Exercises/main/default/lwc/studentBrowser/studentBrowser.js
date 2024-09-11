@@ -4,7 +4,8 @@ import { publish, MessageContext } from
 'lightning/messageService';
 import SELECTED_STUDENT_CHANNEL from
 '@salesforce/messageChannel/SelectedStudentChannel__c';
-export default class StudentBrowser extends LightningElement {
+import NavigationMixin from 'lightning/navigation';
+export default class StudentBrowser extends NavigationMixin(LightningElement) {
    studentList;   
    selectedDeliveryId = '';
    selectedInstructorId = '';
@@ -43,5 +44,47 @@ handleFilterChange(event){
       publish(this.messageContext, SELECTED_STUDENT_CHANNEL, {
       studentId: studentId
       });
+    }
+
+    cols = [
+      {
+        fieldName:"Name", 
+        label: "Name"
+      },
+      {
+        fieldName:"Title", 
+        label: "Title",
+        hiddenOnMobile: true
+      },
+      {
+        fieldName:"Phone", 
+        label: "Phone",
+        type: "phone"
+      },
+      {
+        fieldName:"Email", 
+        label: "E-Mail",
+        type: "email"
+      }
+    ];
+
+    handleRowClick(event){
+      const studentId = event.detail.pk
+      console.log('studentId;;'+studentId);
+      this.updateSelectedStudent(studentId);
+
+    }
+
+    handleRowDBLClick(event){
+      const studentId = event.detail.pk
+      console.log('studentId;;'+studentId);
+      this[NavigationMixin.Navigate]({
+        type:'standard__recordPage',
+        attribute:{
+          actionName:'edit',
+          recordId:studentId
+        }
+      })
+
     }
 }

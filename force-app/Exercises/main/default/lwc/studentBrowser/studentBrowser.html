@@ -8,6 +8,8 @@
             </c-student-tiles>
         </div>
         </lightning-tab>
-        <lightning-tab label="Grid"></lightning-tab>
+        <lightning-tab label="Grid">
+                <c-responsive-datatable pk-field="Id" column-config={cols} row-data={students.data} onrowclick={handleRowClick} onrowdblclick={handleRowDBLClick}></c-responsive-datatable>
+        </lightning-tab>
         </lightning-tabset>
 </template>
